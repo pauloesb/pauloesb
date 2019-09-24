@@ -1,12 +1,12 @@
 .welcomeContainer {
-  flex-direction: column;
-  align-items: center;
   padding-top: 15vh;
   height: 96vh;
 }
 
 .welcome {
   padding-top: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .welcome h1 {

@@ -3,8 +3,10 @@ import classes from './Home.module.css';
 import photo from '../../assets/photo_side.png';
 
 const home = () => (
-  <div className={`${classes.welcomeContainer} container`}>
-    <div className={`${classes.welcome} is-three-quarters is-offset-1 column`}>
+  <div id="home" className={`${classes.welcomeContainer} container`}>
+    <div
+      className={`${classes.welcome} is-flex is-three-quarters is-offset-1 column`}
+    >
       <figure className="image is-128x128">
         <img src={photo} alt="Author" />
       </figure>

@@ -1,29 +1,38 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import classes from './Sidebar.module.css';
 import logo from '../../assets/logo.png';
 
 const sidebar = () => {
   return (
     <section className={`${classes.Sidebar} is-fullheight is-narrow`}>
-      <a href="#home">
+      <Link activeClass="active" to="home" spy smooth duration={500}>
         <figure className="image" style={{ padding: '0.5rem 2rem' }}>
           <img src={logo} alt="avatar" />
         </figure>
-      </a>
+      </Link>
       <div className={`${classes.menuLinks} menu container has-text-centered`}>
         <hr />
         <ul>
           <li>
-            <a href="#history">History</a>
+            <Link activeClass="active" to="history" spy smooth duration={500}>
+              History
+            </Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link activeClass="active" to="projects" spy smooth duration={500}>
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="skills">My Skills</a>
+            <Link activeClass="active" to="skills" spy smooth duration={500}>
+              My Skills
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link activeClass="active" to="contact" spy smooth duration={500}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

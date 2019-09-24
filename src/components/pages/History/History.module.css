@@ -1,0 +1,18 @@
+.historyContainer {
+  padding-top: 5vh;
+  height: auto;
+  text-align: center;
+}
+
+.historyContainer > h1 {
+  color: #f29202;
+}
+
+.historyContainer p {
+  text-align: justify;
+}
+
+.boxSubtitle {
+  color: #a76502 !important;
+  font-weight: bold !important;
+}
