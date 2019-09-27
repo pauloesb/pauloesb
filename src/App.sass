@@ -1,22 +1,26 @@
 @charset "utf-8"
 
+@import "../node_modules/animate.css/animate.min.css"
+
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap')
 $purple: #8a4d76
 $pink: #fa7c91
 $brown: #ffffff
 $beige-light: #d0d1cd
 $beige-lighter: #eff0eb
+$golden: #f29202
 
 // Update Bulma's global variables
 $family-sans-serif: 'Ubuntu', sans-serif
 $grey-dark: $brown
 $grey-light: $beige-light
 $primary: $purple
-$link: $pink
+$link: $golden
 $widescreen-enabled: false
 $fullhd-enabled: false
 
 // Update some of Bulma's component variables
+$column-gap: 0.75rem
 $body-background-color: $beige-lighter
 $control-border-width: 2px
 $input-border-color: transparent
@@ -32,6 +36,7 @@ $input-shadow: none
 @import '../node_modules/bulma/sass/elements/image.sass'
 @import '../node_modules/bulma/sass/layout/section.sass'
 @import '../node_modules/bulma/sass/components/menu.sass'
+@import '../node_modules/bulma/sass/components/card.sass'
 
 .main-app
   background: url('./components/assets/background_sp.jpg') center center
@@ -41,3 +46,24 @@ $input-shadow: none
   width: 100vw
   margin: 0 !important
   box-sizing: border-box
+
+.menu a.active
+  opacity: 0.3
+  
+.dialog-enter 
+  opacity: 0.01
+  transform: scale(1.1)
+
+.dialog-enter-active 
+  opacity: 1
+  transform: scale(1)
+  transition: all 300ms
+
+.dialog-exit 
+  opacity: 1
+  transform: scale(1)
+
+.dialog-exit-active 
+  opacity: 0.01
+  transform: scale(1.1)
+  transition: all 300ms

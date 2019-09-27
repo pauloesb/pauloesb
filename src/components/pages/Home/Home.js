@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Home.module.css';
+import reveal from '../../HOC/reveal';
 import photo from '../../assets/photo_side.png';
 
 const home = () => (
@@ -17,4 +18,4 @@ const home = () => (
   </div>
 );
 
-export default home;
+export default reveal(home);

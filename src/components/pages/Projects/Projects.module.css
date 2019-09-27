@@ -1,0 +1,43 @@
+.projectsContainer {
+  padding-top: 5vh;
+  text-align: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.spaceEvenly {
+  justify-content: space-evenly !important;
+}
+
+.projectsContainer > h1 {
+  color: #f29202;
+}
+
+.cardBg {
+  background: rgba(255, 255, 255, 1) !important;
+}
+
+.cardBg hr {
+  height: 1px;
+  background: grey !important;
+}
+
+.configContent {
+  color: black;
+  text-align: justify;
+}
+
+.customLink {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+  background: #0e0e0e;
+}
+
+.customLink a {
+  transition: all 300ms;
+}
+
+.first {
+  height: 114px;
+}
