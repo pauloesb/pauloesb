@@ -8,7 +8,7 @@ const reveal = App => {
         <ScrollAnimation
           animateIn="fadeIn"
           animateOut="fadeOut"
-          animatePreScroll={false}
+          animatePreScroll
         >
           <App />
         </ScrollAnimation>
