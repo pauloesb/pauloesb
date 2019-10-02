@@ -1,19 +1,14 @@
-import React, { PureComponent } from 'react';
+/* eslint-disable func-names */
+import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const reveal = App => {
-  return class extends PureComponent {
-    render() {
-      return (
-        <ScrollAnimation
-          animateIn="fadeIn"
-          animateOut="fadeOut"
-          animatePreScroll
-        >
-          <App />
-        </ScrollAnimation>
-      );
-    }
+  return function() {
+    return (
+      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" animatePreScroll>
+        <App />
+      </ScrollAnimation>
+    );
   };
 };
 

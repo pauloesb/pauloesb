@@ -4,6 +4,7 @@ import Home from '../../pages/Home';
 import History from '../../pages/History';
 import Projects from '../../pages/Projects';
 import Skills from '../../pages/Skills';
+import Contact from '../../pages/Contact';
 
 const body = () => {
   return (
@@ -12,6 +13,7 @@ const body = () => {
       <History />
       <Projects />
       <Skills />
+      <Contact />
     </main>
   );
 };
