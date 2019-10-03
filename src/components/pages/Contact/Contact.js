@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import axios from 'axios';
 import classes from './Contact.module.css';
 import reveal from '../../HOC/reveal';
 
@@ -29,7 +30,7 @@ const Contact = () => {
 
   const sendMail = event => {
     event.preventDefault();
-    console.log(form);
+    axios.post('/api/contact', form).then(() => console.log('Success!'));
   };
 
   return (
