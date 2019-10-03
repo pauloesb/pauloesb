@@ -2,4 +2,5 @@
   max-width: 80%;
   margin-left: 20%;
   box-sizing: border-box;
+  padding-bottom: 0 !important;
 }
