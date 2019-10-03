@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import Loader from 'react-loader-spinner';
 import axios from 'axios';
 import classes from './Contact.module.css';
 import reveal from '../../HOC/reveal';
@@ -30,8 +31,34 @@ const Contact = () => {
 
   const sendMail = event => {
     event.preventDefault();
-    axios.post('/api/contact', form).then(() => console.log('Success!'));
+    setForm({ ...form, sendingMessage: true });
+    axios
+      .post('/api/contact', form)
+      .then(() =>
+        setForm({
+          name: null,
+          email: null,
+          message: null,
+          sendingMessage: false
+        })
+      )
+      .catch(() => setForm({ ...form, sendingMessage: false }));
   };
+
+  function renderBtn() {
+    let jsx = null;
+    if (form.sendingMessage) {
+      jsx = <Loader type="ThreeDots" color="#f29202" height={50} width={50} />;
+    } else {
+      jsx = (
+        <button type="submit" className="button is-link">
+          Submit
+        </button>
+      );
+    }
+
+    return jsx;
+  }
 
   return (
     <div id="contact" className={`${classes.contactContainer} container`}>
@@ -95,11 +122,7 @@ const Contact = () => {
             className={`${classes.sideBySide} ${classes.btnSubmit} container is-flex`}
           >
             <div className="field">
-              <div className="control">
-                <button type="submit" className="button is-link">
-                  Submit
-                </button>
-              </div>
+              <div className="control">{renderBtn()}</div>
             </div>
           </div>
         </form>
