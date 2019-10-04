@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import Loader from 'react-loader-spinner';
-import axios from 'axios';
 import classes from './Contact.module.css';
 import reveal from '../../HOC/reveal';
 
@@ -10,7 +9,8 @@ const Contact = () => {
     name: null,
     email: null,
     message: null,
-    sendingMessage: false
+    sendingMessage: false,
+    sentMessage: false
   });
 
   const handlerForm = event => {
@@ -31,15 +31,22 @@ const Contact = () => {
 
   const sendMail = event => {
     event.preventDefault();
-    setForm({ ...form, sendingMessage: true });
-    axios
-      .post('/api/contact', form)
+    setForm({ ...form, sendingMessage: true, sentMessage: false });
+    // eslint-disable-next-line no-undef
+    fetch('https://sgmailer.herokuapp.com/v1/api/contact', {
+      method: 'post',
+      body: JSON.stringify(form),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
       .then(() =>
         setForm({
           name: null,
           email: null,
           message: null,
-          sendingMessage: false
+          sendingMessage: false,
+          sentMessage: true
         })
       )
       .catch(() => setForm({ ...form, sendingMessage: false }));
@@ -57,6 +64,14 @@ const Contact = () => {
       );
     }
 
+    return jsx;
+  }
+
+  function renderSuccess() {
+    let jsx = null;
+    if (form.sentMessage) {
+      jsx = <p className="content">Message sent with success!</p>;
+    }
     return jsx;
   }
 
@@ -123,6 +138,7 @@ const Contact = () => {
           >
             <div className="field">
               <div className="control">{renderBtn()}</div>
+              <div className="control">{renderSuccess()}</div>
             </div>
           </div>
         </form>
