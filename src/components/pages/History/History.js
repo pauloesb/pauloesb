@@ -84,12 +84,12 @@ const history = () => {
           <div icon="7&deg;">
             <h1 className="title is-size-5">Freelance for BoominGroup</h1>
             <h2 className={`${classes.boxSubtitle} is-size-7 subtitle`}>
-              October, 2018 until June, 2019
+              October, 2018 until now
             </h2>
             <p className="content is-size-7">
               After Novatics, I started to work as a freelance for Boomingroup
               by giving maintenance to their client&#39;s websites using
-              Wordpress, Jupiter, and PHP.
+              Wordpress, Jupiter, PHP and Ruby on Rails.
             </p>
           </div>
         </Timeline>
