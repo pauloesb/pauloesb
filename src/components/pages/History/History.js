@@ -92,22 +92,6 @@ const history = () => {
               Wordpress, Jupiter, and PHP.
             </p>
           </div>
-          <div icon="8&deg;">
-            <h1 className="title is-size-5">
-              Development Analyst at
-              <br />
-              Cast Group
-            </h1>
-            <h2 className={`${classes.boxSubtitle} is-size-7 subtitle`}>
-              August, 2019 - Current Workplace
-            </h2>
-            <p className="content is-size-7">
-              As a Java Developer I work by giving maintenance and evolution to
-              the Caixa Economica Bank systems, using JSF, JSP, Angular, Struts
-              and other legacy frameworks. Also, I develop some features for the
-              company&#39;s Redmine using Ruby on Rails.
-            </p>
-          </div>
         </Timeline>
       </StyleRoot>
     </div>
