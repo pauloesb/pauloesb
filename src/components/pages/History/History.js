@@ -82,14 +82,39 @@ const history = () => {
             </p>
           </div>
           <div icon="7&deg;">
-            <h1 className="title is-size-5">Freelance for BoominGroup</h1>
+            <h1 className="title is-size-5">Software Engineer at BoominGroup</h1>
             <h2 className={`${classes.boxSubtitle} is-size-7 subtitle`}>
-              October, 2018 until now
+              October, 2018 until November, 2019
             </h2>
             <p className="content is-size-7">
-              After Novatics, I started to work as a freelance for Boomingroup
+              After Novatics, I started to work for Boomingroup
               by giving maintenance to their client&#39;s websites using
-              Wordpress, Jupiter, PHP and Ruby on Rails.
+              Wordpress, Jupiter, PHP, Vue.JS and Ruby on Rails.
+            </p>
+          </div>
+          <div icon="8&deg;">
+            <h1 className="title is-size-5">Full Stack Developer at Ignição Digital</h1>
+            <h2 className={`${classes.boxSubtitle} is-size-7 subtitle`}>
+              December, 2019 until December, 2020
+            </h2>
+            <p className="content is-size-7">
+              Developed features using Ruby on Rails and NodeJS, focused on
+              dealing with events management, sell of tickets, clients
+              management, integration with payment services and integration
+              with third party invoice services along with its own microservice.
+            </p>
+          </div>
+          <div icon="9&deg;">
+            <h1 className="title is-size-5">Data Integration Engineer</h1>
+            <h2 className={`${classes.boxSubtitle} is-size-7 subtitle`}>
+              March, 2021 until now
+            </h2>
+            <p className="content is-size-7">
+              Responsible to deliver Property information through the
+              Ruby on Rails API given the needs of other teams through specific
+              services, by integrating Elasticsearch along with API, and managing
+              multiple services to provide a Single Source of Truth for the needs
+              of other departments.
             </p>
           </div>
         </Timeline>
