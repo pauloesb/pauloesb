@@ -22,8 +22,7 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "precommit": "NODE_ENV=production lint-staged"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -61,5 +60,10 @@
       "eslint src/ --fix",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "NODE_ENV=production lint-staged"
+    }
   }
 }
