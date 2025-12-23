@@ -1,2 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for pauloesb.dev
 User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://pauloesb.dev/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
