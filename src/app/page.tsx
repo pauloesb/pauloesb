@@ -25,6 +25,14 @@ const EmailIcon = () => (
   </svg>
 );
 
+const PBLogo = () => (
+  <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="40" height="40" fill="var(--color-ink)"/>
+    <text x="20" y="26" fontFamily="Georgia, serif" fontSize="16" fontWeight="600" fill="var(--color-cream)" textAnchor="middle">PB</text>
+    <rect y="35" width="40" height="5" fill="var(--color-vermillion)"/>
+  </svg>
+);
+
 // Section Header
 const SectionHeader = ({ number, title }: { number: string; title: string }) => (
   <div className="relative mb-12">
@@ -147,7 +155,7 @@ export default function CVPage() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-cream)]/90 backdrop-blur-sm border-b border-[var(--color-stone)]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-[family-name:var(--font-playfair)] text-lg font-medium tracking-tight">PB</span>
+          <PBLogo />
           <nav className="flex items-center gap-8">
             <a href="https://github.com/pauloesb" className="link-underline text-sm uppercase tracking-wider hover:text-[var(--color-vermillion)] transition-colors flex items-center gap-2">
               <GitHubIcon />
